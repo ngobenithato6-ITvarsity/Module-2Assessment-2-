@@ -1,0 +1,167 @@
+/* Mall Map Styles
+================================================== */
+
+#mall_map_point {
+    position: absolute; left: 0; top: 0; z-index: 20;
+    display: none; width: 20px; height: 29px;
+	text-indent: -9999px; overflow: hidden;
+    cursor: pointer;
+}
+#mall_map_shop_point { width: 20px; height: 29px; }
+
+a#mall_map_btn_up {
+	display: block;
+	text-indent: -9999px;
+	overflow: hidden;
+	background: url('../../img/arrow-up.png') center center no-repeat;
+	width: 100%;
+	height: 50px;
+    cursor: pointer;
+}
+a#mall_map_btn_up:hover {}
+
+a#mall_map_btn_down {
+	display: block;
+	text-indent: -9999px;
+	overflow: hidden;
+	background: url('../../img/arrow-down.png') center center no-repeat;
+    width: 100%;
+	height: 50px;
+    cursor: pointer;
+}
+a#mall_map_btn_down:hover {}
+
+a#mall_map_btn_left {
+	float: left;
+	width: 10%;
+	display: block;
+	text-indent: -9999px;
+	overflow: hidden;
+	background: url('../../img/arrow-left.png') center center no-repeat;
+	height: 300px;
+    cursor: pointer;
+}
+a#mall_map_btn_left:hover {}
+
+a#mall_map_btn_right {
+	float: left;
+	width: 10%;
+	display: block;
+	text-indent: -9999px;
+	overflow: hidden;
+	background: url('../../img/arrow-right.png') center center no-repeat;
+	height: 300px;
+    cursor: pointer;
+}
+a#mall_map_btn_right:hover {}
+
+div#no_point {
+	position: absolute; left: 0px; top: 0px; z-index: 50;
+    display: none; padding-top: 13px; width: 100%; height: 50px;
+	background: url('../../img/mall-map/map_caption_bg.png');
+	color: #fff; text-align: center; font-size: 16px;
+}
+
+/*Touch below at own risk*/
+/*###############################################################################*/
+
+.map-viewport{ position:relative; width:300px; height:300px; overflow:hidden; }
+.level{ position:absolute; left:0; top:0; z-index:10;}
+.current-level{ z-index:20; }
+#map{ width:1200px; height:900px; position:absolute; left:0; top:0; cursor:move;}
+
+.map_constraint { background: #fff; }
+
+#mall_map_outer_container,
+#mall_map_inner_container { width: 100%; }
+
+#mall_map_window {
+	float: left; width: 80%; position: relative; overflow: hidden; height: 300px; background: #fff;
+    
+    -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px;
+    border: solid 1px #262323;
+}
+
+#mall_map_pane {
+	max-width: none;
+	position: absolute;
+	left:0;
+	top:0;	
+	display:block;
+	z-index:20;
+}
+
+#mall_map_img {
+	max-width: none;	
+}
+
+.map-viewport {
+	position:relative;
+	width:300px;
+	height:300px;
+	overflow:hidden;
+}
+
+.level {
+	position:absolute;
+	left:0;
+	top:0;
+	z-index:10;
+}
+
+.current-level {
+	z-index:20;
+}
+
+
+/* #Media Queries
+================================================== */
+
+	/* Smaller than standard 960 (devices and browsers) */
+	@media only screen and (max-width: 959px) {
+
+			
+
+	}
+
+	/* Tablet Portrait size to standard 960 (devices and browsers) */
+	@media only screen and (min-width: 768px) and (max-width: 959px) {}
+
+	/* All Mobile Sizes (devices and browser) */
+	@media only screen and (max-width: 767px) {
+
+		.map_header_row span {
+		    display: block;
+		    margin-bottom: 8px;
+		}			
+
+	}
+
+	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+	@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+	}
+
+	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+	@media only screen and (max-width: 479px) {
+
+		
+
+	}
+
+	
+/* #Target Smartphones
+================================================== */
+  @media screen and (max-device-width: 320px) and (orientation: portrait){
+
+  }
+  
+  /* Target iPhone 4S Portrait */
+  @media screen and (orientation:portrait) and (-webkit-min-device-pixel-ratio: 2) {
+
+  }
+  /* Target iPhone 4S Landscape */
+  @media screen and (orientation:landscape) {
+
+  }
+

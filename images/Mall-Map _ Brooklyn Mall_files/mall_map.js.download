@@ -1,0 +1,191 @@
+// Mall Map Scripts
+
+var shop_page = "shop";
+var pane_width;
+var pane_height;
+var window_width;
+var window_height;
+var left_offset;
+var top_offset;
+var tempMap = '';
+
+var map = $("#mall_map_img");
+var pointer_width = $("#mall_map_point").width();
+var pointer_height = $("#mall_map_point").height();
+
+var viewport = $("#mall_map_window");
+
+$(document).ready(function(){
+
+    $("#mall_map_point").hide();
+
+});
+
+$(window).load(function(){ setMapSizes(); });
+
+$("select[name=floor]#map_select").on('change', change_floor);
+var change_floor = function() { var value = $(this).val();showMap(value); };
+
+$("select[name=category]#shop_select").on('change', change_shop);
+var change_shop = function() { var value = $(this).val();showMapLocation(value); };
+
+//Triggers on find a select a floor map select dropdown is selected
+function showMap(mapURL) {
+    if ( mapURL == '' ) { alert("Please select one of the floor maps");return; }
+    $("#mall_map_img").attr("src", mapURL);
+    $('#map_select').val(mapURL);
+    $("#mall_map_img").on('load', function() {
+        tempMap = mapURL;
+        $("#mall_map_point").hide();
+        $("#mall_map_pane").stop(1,0).animate({ left: "0px", top: "0px" });
+        setMapSizes();
+    });
+}
+
+//Triggers on find a shop select dropdown is selected
+function showMapLocation(mapVals) {
+    if ( mapVals == '' ) { alert("Please select one of the shop names");return; }
+
+    mapParts = new Array();
+    mapParts = mapVals.split('|');
+    mapSrc = mapParts[0];
+
+    //It's a new map or the 1st time
+    if ( ( tempMap != mapSrc ) || ( tempMap == '' ) ) {
+        //$("#mall_map_img").attr("src", mapParts[0]);
+        showMap(mapParts[0]);
+        placeMapPointer(mapParts[1], mapParts[2], mapParts[3], mapParts[4]);
+        // Wait for new image map to load
+        $("#mall_map_img").on('load', function() {
+            setMapSizes();
+            placeMapPointer(mapParts[1], mapParts[2], mapParts[3], mapParts[4]);
+        });
+    } else { placeMapPointer(mapParts[1], mapParts[2], mapParts[3], mapParts[4]); }
+    tempMap = mapSrc;
+}
+
+//Places the map pointer on a specific shop
+function placeMapPointer(x, y, shop_slug, mgid){
+
+    $('#no_point').hide();
+
+    if (x == "" && y == "") {
+
+        $('#no_point').show();
+        $("#mall_map_point").hide();
+
+    } else {
+
+        focusMap(x, y);
+
+        $("#mall_map_point").css({
+            "left":x + "px",
+            "top":y + "px"
+        });
+
+        $("#mall_map_point").show();
+
+        $("#mall_map_point").click(function(){
+            window.location.href = shop_page + '/' + shop_slug + '/' + mgid + '/';
+        });
+    }
+
+}
+
+//sets offest sizes depending on map window and pane sizes
+function setMapSizes(){
+
+    pane_width = $("#mall_map_pane").width();
+    pane_height = $("#mall_map_pane").height();
+    window_width = $("#mall_map_window").width();
+    window_height = $("#mall_map_window").height();
+
+    left_offset = window_width - pane_width;
+    top_offset = window_height - pane_height;
+}
+
+//Triggers on window resize
+$(window).resize(function() {
+
+    window_width = $("#mall_map_window").width();
+    window_height = $("#mall_map_window").height();
+    setMapSizes();
+
+});
+
+//Focus the map centered on the point
+function focusMap(x,y){
+
+    xMapCoord = -x + ($("#mall_map_window").width() / 2) - (pointer_width / 2 );
+    yMapCoord = -y + ($("#mall_map_window").height() / 2) - (pointer_height);
+
+    $("#mall_map_pane").stop(1,0).animate({ left: xMapCoord + "px", top: yMapCoord + "px" });
+
+}
+
+//map directional button functions
+$("#mall_map_btn_up").click(function () {
+    if(withInConstraints('up')) {
+        $("#mall_map_pane").stop(1,0).animate({top: '+=50'}, 200);
+    }
+});
+
+$("#mall_map_btn_down").click(function () {
+    if(withInConstraints('down')) {
+        $("#mall_map_pane").stop(1,0).animate({top: '-=50'}, 200);
+    }
+});
+
+$("#mall_map_btn_left").click(function () {
+    if(withInConstraints('left')) {
+        $("#mall_map_pane").stop(1,0).animate({left: '+=50'}, 200);
+    }
+});
+
+$("#mall_map_btn_right").click(function () {
+    if(withInConstraints('right')) {
+        $("#mall_map_pane").stop(1,0).animate({left: '-=50'}, 200);
+    }
+});
+
+//testing if direction click is within constraints
+function withInConstraints(direction){
+    paneOffset = $("#mall_map_pane").offset();
+    windowOffset = $("#mall_map_window").offset();
+
+    result = false;
+
+    switch (direction)
+    {
+        case 'up':
+            if (paneOffset.top < windowOffset.top) {
+                result = true;
+            } else {
+                result = false;
+            }
+            break;
+        case 'down':
+            if ((paneOffset.top + pane_height) > (windowOffset.top + window_height)) {
+                result = true;
+            } else {
+                result = false;
+            }
+            break;
+        case 'left':
+            if (paneOffset.left < windowOffset.left) {
+                result = true;
+            } else {
+                result = false;
+            }
+            break;
+        case 'right':
+            if ((paneOffset.left + pane_width) > (windowOffset.left + window_width)) {
+                result = true;
+            } else {
+                result = false;
+            }
+            break;
+    }
+
+    return result;
+}

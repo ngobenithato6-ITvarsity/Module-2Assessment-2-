@@ -1,0 +1,29 @@
+/* ###--------------------------------------- Utility Functions -------------------------------------------### */
+
+/**
+ * Makes Bootstrap menu work on hover ( animated )
+ */
+$(document).ready(function(){ enableBootstrapMenuHover(); });
+function enableBootstrapMenuHover(){ var duration = 300;/* Dropdown animation duration */
+    var nav = $('ul.nav'), items = nav.children('li.dropdown');loopMenuItems(items,duration);
+    var subnav = $('ul.dropdown-menu'), subitems = subnav.children('li.dropdown-submenu');loopMenuItems(subitems,duration); }
+function loopMenuItems(items,duration){if(!items.length||!duration){return false;}items.each(function(){var item = $(this);var anchor = item.children('a');anchor.click(function(){ return false; });item.hover(function(){var li = $(this);if ( !li.hasClass('open') ) { li.addClass('open'); }li.children('ul.dropdown-menu').removeAttr('style').show().hide().stop(1,0).slideToggle(duration);},function(){var li = $(this);li.children('ul.dropdown-menu').removeAttr('style').hide().show().stop(1,0).slideToggle(duration,function(){if ( li.hasClass('open') ) { li.removeClass('open'); }});});});}
+
+/**
+ * Collapse Mobi menu on mobi exit ( larger than mobi ) and on nav link click
+ */
+$(document).ready(function(){ if( $('div.navbar-collapse').length ){ if ( matchMedia('(min-width: 768px)').matches ) { collapseMobiMenu(); } } });
+$(window).resize(function(){ if( $('div.navbar-collapse').length ){ if ( matchMedia('(min-width: 768px)').matches ) { collapseMobiMenu(); } } });
+$(document).ready(function(){ collapseMobiMenuOnNavClick(); });
+function collapseMobiMenu(){if( $('div.navbar-collapse').hasClass('in')){$('div.navbar-collapse').removeClass('in').removeAttr('style');if(!$('div.navbar-collapse').hasClass('collapse')){$('div.navbar-collapse').addClass('collapse');}if(!$('button.navbar-toggle').hasClass('collapsed')){$('button.navbar-toggle').addClass('collapsed');}}}
+function collapseMobiMenuOnNavClick(){$('.nav a').on('click',function(){if(!$(this).hasClass('dropdown-toggle')){if($('.navbar-toggle').css('display')!='none'){collapseMobiMenu();}}});}
+
+/* ###----------------------------------------------------------------------------------### */
+
+/**
+ * Enable Magnific Popup Gallery
+ * */
+$(document).ready(function(){ enableMagnific(); });
+function enableMagnific(){$('div.magnific-popup-gallery').each(function() {$(this).magnificPopup({delegate: 'a.magnific-popup-gallery-image',type: 'image',tLoading: 'Loading image #%curr%...',mainClass: 'mfp-img-mobile',gallery: {enabled: true,navigateByImgClick: true,preload: [0,1]},image: {tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',titleSrc: function(item) { return item.el.attr('title'); }}});});$('a.magnific-popup').magnificPopup({type: 'image',closeOnContentClick: true,mainClass: 'mfp-img-mobile',image: {tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',titleSrc: function(item) { return item.el.attr('title'); }}});$('a.magnific-popup-inline').magnificPopup({type: 'inline',fixedContentPos: false,fixedBgPos: true,overflowY: 'auto',closeBtnInside: true,preloader: false,midClick: true,removalDelay: 300,mainClass: 'my-mfp-zoom-in'});}
+
+/* ###----------------------------------------------------------------------------------### */

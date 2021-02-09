@@ -1,0 +1,256 @@
+@media (max-width: 1199px) {
+
+	header {	    margin-bottom: 220px;	}
+	.bg-01, .bg-02, .bg-03{	background-size: 2010px auto;	}
+
+	.front-blocks p {
+	    font-size: 18px;
+	    line-height: 20px;
+	    margin-top: 250px;
+	}
+	.front-blocks a {
+	    font-size: 18px;
+	    line-height: 20px;
+	    margin-top: 268px;
+	}
+
+	.main-page .front-blocks{height:85px;}
+
+	#trading-hours{  height:320px; }
+	#gift-card{ height:320px; }
+	#parking-card{ height:320px; }
+
+
+	.main-page .front-blocks a { height:85px; }
+	.main-page .front-blocks{height:85px;}
+
+	.main-page #trading-hours{  height:85px; }
+	.main-page #gift-card{  height:85px; }
+	.main-page #parking-card{  height:85px; }
+
+	#eventCalendar { height: 162px;  width: 156px;	}
+	#calendarMonth {    margin-top: 34px;     line-height: 4px;    position: relative;    top: 35px;}
+	#calendarDate {   font-size: 54px;    margin-top: 0px; }
+
+	#socialLinks {  width: 78px; }
+	#socialLinks a {   margin: 10px auto;  }
+
+	.banner-icons {    right: 0;	}
+
+	.moviePoster{
+	    width: 192px;
+	}
+
+	#bs-example-navbar-collapse-1 {
+    background-color: #e4e4e4;
+    font-size: 15px !important;
+	}
+
+	.nav .navbar-nav {
+		font-size: 15px !important;
+	}
+
+}
+@media (max-width: 991px) {
+
+	#site-head {     background: url("../img/site-logo-tablet.gif") no-repeat scroll center 10px #fff;     height: 176px; }
+
+	header {	    margin-bottom: 276px;	}
+
+	.bg-01{	background:url("../img/background-tablet-1.jpg") no-repeat scroll center 180px / 750px auto transparent; 	}
+	.bg-02{	background:url("../img/background-tablet-1.jpg") no-repeat scroll center 180px / 750px auto transparent; 	}
+	.bg-03{	background:url("../img/background-tablet-1.jpg") no-repeat scroll center 180px / 750px auto transparent; 	}
+
+
+	.front-blocks{	margin-top:10px; }
+	.front-blocks p {
+	    font-size: 16px;
+   		line-height: 19px;
+    	margin-top: 189px;
+	}
+	.front-blocks a {
+	    font-size: 18px;
+	    line-height: 20px;
+	    margin-top: 203px;
+	}
+
+	#trading-hours{  height:250px; }
+	#gift-card{ height:250px; }
+	#parking-card{ height:250px; }
+
+	#eventCalendar { height: 130px;  width: 122px;	}
+	#calendarMonth {    margin-top: 24px; font-size:13px; }
+	#calendarDate {  font-size: 42px;   line-height: 24px;   margin-top: 0; }
+	
+	#socialLinks {  width: 58px; }
+	#socialLinks a {  height: 45px; margin: 15px auto;     padding-top: 2px;  width: 45px; }
+    
+	.banner-icons {    right: 0;	}
+
+	.moviePoster{
+	    width: 146px;
+	}
+
+	.moviePoster img{
+	    width: 140px;
+	    height: 202px;
+	}
+
+	.index-page #parking-card p a {
+	    font-size: 13px;
+	    line-height: 14px;
+	    margin-top: 0;
+	    width: 90%;
+	}
+
+	#bs-example-navbar-collapse-1 {
+    background-color: #e4e4e4;
+    font-size: 15px !important;
+	}
+
+	.nav .navbar-nav {
+		font-size: 15px !important;
+	}
+
+}
+
+@media (max-width: 767px) {
+
+	.front-image{  display:block; }
+
+
+	#site-head {     background: url("../img/site-logo-phone.gif") no-repeat scroll center 10px #fff;     height: 176px; }
+
+	header {     margin-bottom: 0; }
+
+	.bg-01{	background:url("../img/background-phone-1.jpg") no-repeat scroll center 180px transparent; 	}
+	.bg-02{	background:url("../img/background-phone-1.jpg") no-repeat scroll center 180px transparent; 	}
+	.bg-03{	background:url("../img/background-phone-1.jpg") no-repeat scroll center 180px transparent; 	}
+
+
+	.showEvents{ display: none;	}
+
+	.front-blocks{	margin-top:10px; width:50%; float:left;}
+	.main-page .front-blocks{ width:48%; margin:1%;}
+
+	.front-blocks p {
+	    font-size: 16px;
+   		line-height: 20px;
+    	margin-top: 0;
+	}
+	.front-blocks a {
+	    font-size: 18px;
+	    line-height: 20px;
+	    margin-top: 0;
+	}
+
+	#trading-hours{ padding-right:10px !important;  height:250px; background-position: center top; background-size: auto 100%; padding-top: 205px; }
+	#parking-card{ padding-left:10px !important; height:250px; background-position: center top; background-size: auto 100%; padding-top: 190px; }
+
+	.main-page #trading-hours{ padding-right:10px !important;  height:90px; background-position: center top; background-size: 100% auto; padding-top: 0; }
+	.main-page #parking-card{ padding-left:10px !important; height:90px; background-position: center top; background-size: 100% auto; padding-top: 0; }
+
+	#gift-card{ display: none;	}
+
+	#eventCalendar {     width:186px;     height:197px;	}
+	#calendarMonth {   font-size:16px;  margin-top: 34px;   position: relative;     top: 48px;}
+	#calendarDate {   font-size:58px;  margin-top: 14px; line-height: 44px; }
+
+	#eventImage{ display:none;	}
+	
+	#socialLinks {  width: 65px; float:left; }
+	#socialLinks a {  height: 65px; margin: 20px auto;     padding-top: 12px;  width: 65px; }
+    
+	.banner-icons {    right: 0;	}
+
+	.storeDirectoryHead{
+		display:none;	
+	}
+
+	.moviePoster{
+	    position: relative;
+	    width: 100%;
+	    z-index: 100;
+	}
+
+	.moviePoster img{
+	    width: 179px;
+	    height: 258px;
+	}
+
+	.dropdown-menu li {
+	    display: inherit;	;
+	    float: none;
+	    font-size: 18px;
+	    padding:10px 20px 10px 10px;
+	    margin: 0;
+	}	
+	.dropdown-menu li a{
+	    margin: 0;
+	}
+	.dropdown-menu li{
+		padding: 0;
+	}
+
+	.index-page #parking-card p a {
+	    width: 215px;
+	}
+
+}
+
+@media (max-width: 510px) {
+
+	.noMobile{display: none;	}
+
+	header {     margin-bottom: 0; }
+
+	.bg-01{	background:url("../img/background-phone-1.jpg") no-repeat scroll center 180px / 300px auto transparent; 	}
+	.bg-02{	background:url("../img/background-phone-1.jpg") no-repeat scroll center 180px / 300px auto  transparent; 	}
+	.bg-03{	background:url("../img/background-phone-1.jpg") no-repeat scroll center 180px / 300px auto  transparent; 	}
+
+	.front-blocks{	margin-top:10px; width:100%;}
+
+	.main-page .front-blocks {  margin: 1%;   width: 98%;  }
+
+	.front-blocks p {
+	    font-size: 18px;
+   		line-height: 20px;
+    	margin-top: 0;
+	}
+	.front-blocks a {
+	    font-size: 18px;
+	    line-height: 20px;
+	    margin-top: 0;
+	}
+
+	#trading-hours{  height:300px; background-position: center top; background-size: auto 100%; padding-top: 250px; }
+	#gift-card{ height:300px; background-position: center top; background-size: auto 100%; padding-top: 250px; }
+	#parking-card{ height:300px; background-position: center top; background-size: auto 100%; padding-top: 234px; }
+
+	.main-page .front-blocks a {   padding: 13.9%;   	}
+
+	.main-page #trading-hours{ padding-right:10px !important;  height:auto; background-position: center top; background-size: 100% auto; padding-top: 0; }
+	.main-page #parking-card{ padding-left:10px !important; height:auto; background-position: center top; background-size: 100% auto; padding-top: 0; }
+	.main-page #gift-card{ height:auto; background-position: center top; background-size: 100% auto; padding-top: 0; }
+
+
+	#gift-card{ display: inherit;	}
+
+	#calendarDate {
+	  margin-top: -29px !important;
+	  line-height: 88px;
+	
+	  line-height: 4px;  position: relative;  
+	  top: 37px;
+}
+	#calendarMonth {
+	  margin-top: 60px !important;
+	
+	  line-height: 7px;  position: relative;  
+	  top: 26px;
+}
+	  
+
+}
+
+

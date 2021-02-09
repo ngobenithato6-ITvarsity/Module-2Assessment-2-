@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)https://www.brooklynmall.co.za/mall-map.htm -->
+<html lang="en" class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"><!-- Remove for non-responsive Bootstrap -->
+
+    <title>Mall-Map | Brooklyn Mall</title>
+    <meta name="description" content="Find your way on our Brooklyn Mall map, locate stores and parking exits with ease."><!-- max 156 characters -->
+
+    <!-- Favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="https://www.brooklynmall.co.za/favicon.png">
+    <link rel="apple-touch-icon" href="https://www.brooklynmall.co.za/apple-touch-icon-precomposed.png">
+
+    <!-- CSS Files
+    ================================================== -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./Mall-Map _ Brooklyn Mall_files/bootstrap.min.css">
+    <link rel="stylesheet" href="./Mall-Map _ Brooklyn Mall_files/bootstrap-datepicker3.css">
+    <link rel="stylesheet" href="./Mall-Map _ Brooklyn Mall_files/bootstrap-checkbox.css">
+    <link rel="stylesheet" href="./Mall-Map _ Brooklyn Mall_files/bootstrap-modal-bs3patch.css">
+    <link rel="stylesheet" href="./Mall-Map _ Brooklyn Mall_files/bootstrap-modal.css">
+    <!-- Plugins -->
+    <link rel="stylesheet" href="./Mall-Map _ Brooklyn Mall_files/chosen.min.css">
+    <link rel="stylesheet" href="./Mall-Map _ Brooklyn Mall_files/magnific-popup.css">
+    <link rel="stylesheet" href="./Mall-Map _ Brooklyn Mall_files/animate.css">
+    <!-- Project -->
+    <link rel="stylesheet" href="./Mall-Map _ Brooklyn Mall_files/defaults.css">
+    <link rel="stylesheet" href="./Mall-Map _ Brooklyn Mall_files/layout.css">
+    <link rel="stylesheet" href="./Mall-Map _ Brooklyn Mall_files/media.css">
+    <link rel="stylesheet" href="./Mall-Map _ Brooklyn Mall_files/hover.css">
+    <link rel="stylesheet" href="./Mall-Map _ Brooklyn Mall_files/mall_map.css">
+<style id="holderjs-style" type="text/css"></style></head>
+
+<body class="main-page bg-01">
+<!--[if lte IE 8]><div class="outdated-browser">You are using an old browser version.<br />This can have the consequence that new technologies are not supported and that websites may not display correctly.<br /><strong>Most importantly older browsers have security issues.</strong><br /><a href="http://browsehappy.com/" target="_new">Consider upgrading to a modern browser</a>.</div><![endif]--><noscript><div class="outdated-browser">Your browser's JavaScript is disabled / does not support JavaScript.<br />This website requires JavaScript to work correctly.<br />Please enable JavaScript / use a browser that supports JavaScript to enabled all this website's features.</div></noscript>
+
+<!-- Header
+================================================== -->
+<div class="container alpha omega">
+    <header>
+    <div id="site-head">
+
+        <a href="https://www.brooklynmall.co.za/" id="homeLink">Brooklyn Mall</a>
+
+        <div class="banner-icons">
+            <div data-toggle="tooltip" data-placement="left" title="" data-original-title="Search Brooklyn Mall">
+                <div class="button-search"></div>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-default navbar-static-top m-b-0" role="navigation">
+            <div class="">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand p-tb-10 font-30 line-30" href="https://www.brooklynmall.co.za/"><span class="fa fa-home"></span></a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">	<li id="nav-the_mall" class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="https://www.brooklynmall.co.za/mall-map.htm#">THE MALL</a>
+		<ul class="dropdown-menu">
+			<li id="subnav-about_the_mall"><a href="https://www.brooklynmall.co.za/about-the-mall.htm">About The Mall</a></li>
+			<li id="subnav-centre_management"><a href="https://www.brooklynmall.co.za/management.htm">Centre Management</a></li>
+			<li id="subnav-marketing"><a href="https://www.brooklynmall.co.za/marketing.htm">Marketing</a></li>
+			<li id="subnav-cares_initiative"><a href="https://www.brooklynmall.co.za/care.htm">Cares Initiative</a></li>
+			<li id="subnav-facilities_&amp;_services"><a href="https://www.brooklynmall.co.za/facilities.htm">Facilities &amp; Services</a></li>
+			<li id="subnav-parking"><a href="https://www.brooklynmall.co.za/parking.htm">Parking</a></li>
+			<li id="subnav-security"><a href="https://www.brooklynmall.co.za/security.htm">Security</a></li>
+			<li id="subnav-trading_hours"><a href="https://www.brooklynmall.co.za/hours.htm">Trading Hours</a></li>
+			<li id="subnav-be_the_first_to_know"><a href="https://www.brooklynmall.co.za/newsletter.htm">Be The First To Know</a></li>
+			<li id="subnav-contact_details"><a href="https://www.brooklynmall.co.za/contact.htm">Contact Details</a></li>
+		</ul>
+	</li>
+	<li id="nav-fashion" class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="https://www.brooklynmall.co.za/mall-map.htm#">FASHION</a>
+		<ul class="dropdown-menu">
+			<li id="subnav-ladies"><a href="https://www.brooklynmall.co.za/ladies.htm?category=ladies">Ladies</a></li>
+			<li id="subnav-men&#39;s"><a href="https://www.brooklynmall.co.za/mens.htm?category=mens">Men's</a></li>
+			<li id="subnav-unisex"><a href="https://www.brooklynmall.co.za/unisex.htm?category=unisex">Unisex</a></li>
+			<li id="subnav-footwear"><a href="https://www.brooklynmall.co.za/footwear.htm?category=shoes">Footwear</a></li>
+		</ul>
+	</li>
+	<li id="nav-food" class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="https://www.brooklynmall.co.za/mall-map.htm#">FOOD</a>
+		<ul class="dropdown-menu">
+			<li id="subnav-fast_food"><a href="https://www.brooklynmall.co.za/food.htm?category=fast+food">Fast Food</a></li>
+			<li id="subnav-coffee_shops"><a href="https://www.brooklynmall.co.za/food.htm?category=coffee+shops">Coffee Shops</a></li>
+			<li id="subnav-restaurants"><a href="https://www.brooklynmall.co.za/food.htm?category=restaurants">Restaurants</a></li>
+			<li id="subnav-speciality"><a href="https://www.brooklynmall.co.za/food.htm?category=Speciality">Speciality</a></li>
+		</ul>
+	</li>
+	<li id="nav-lifestyle"><a href="https://www.brooklynmall.co.za/lifestyle.htm?category=lifestyle">LIFESTYLE</a></li>
+	<li id="nav-stores_guide" class="dropdown active"><a class="dropdown-toggle" data-toggle="dropdown" href="https://www.brooklynmall.co.za/mall-map.htm#">STORES GUIDE</a>
+		<ul class="dropdown-menu">
+			<li id="subnav-shop_directory"><a href="https://www.brooklynmall.co.za/categories.htm">Shop Directory</a></li>
+			<li id="subnav-mall_map" class="active"><a href="https://www.brooklynmall.co.za/mall-map.htm">Mall Map</a></li>
+			<li id="subnav-new_stores"><a href="https://www.brooklynmall.co.za/new-stores.htm">New Stores</a></li>
+			<li id="subnav-leasing"><a href="https://www.brooklynmall.co.za/leasing.htm">Leasing</a></li>
+		</ul>
+	</li>
+	<li id="nav-best_of_brooklyn" class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="https://www.brooklynmall.co.za/mall-map.htm#">BEST OF BROOKLYN</a>
+		<ul class="dropdown-menu">
+			<li id="subnav-best_of_brooklyn"><a href="https://www.brooklynmall.co.za/best-of-brooklyn.htm">Best Of Brooklyn</a></li>
+			<li id="subnav-brooklyns_best_buys"><a href="https://www.brooklynmall.co.za/brooklyns-best-buys.htm">Brooklyns Best Buys</a></li>
+		</ul>
+	</li>
+	<li id="nav-entertainment" class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="https://www.brooklynmall.co.za/mall-map.htm#">ENTERTAINMENT</a>
+		<ul class="dropdown-menu">
+			<li id="subnav-clubs_&amp;_fairs"><a href="https://www.brooklynmall.co.za/fun.htm">Clubs &amp; Fairs</a></li>
+			<li id="subnav-ster_kinekor"><a href="https://www.brooklynmall.co.za/movies.htm">Ster Kinekor</a></li>
+			<li id="subnav-cinema_nouveau"><a href="https://www.brooklynmall.co.za/movies2.htm">Cinema Nouveau</a></li>
+		</ul>
+	</li>
+	<li id="nav-events" class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="https://www.brooklynmall.co.za/mall-map.htm#">EVENTS</a>
+		<ul class="dropdown-menu">
+			<li id="subnav-current_events"><a href="https://www.brooklynmall.co.za/events.htm">Current Events</a></li>
+			<li id="subnav-past_events"><a href="https://www.brooklynmall.co.za/events-past.htm">Past Events</a></li>
+		</ul>
+	</li>
+</ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /. -->
+        </nav>
+
+        <!-- Website Search [ Start ]
+        ================================================================ -->
+        <div id="search-area">
+            <div class="col-sm-4 ">
+
+                <form action="https://www.brooklynmall.co.za/search.htm" name="frmKeywordSearch" id="frmKeywordSearch" method="get" role="form" class="form-inline m-b-15">
+                    <input type="text" name="keyword" id="keyword" placeholder="Keyword Search" class="form-control" data-tabindex="1">
+                    <input type="image" name="submit" src="./Mall-Map _ Brooklyn Mall_files/search-button.gif">
+                </form>
+
+                <div class="showPromotions">
+                    <h3>Promotions</h3>
+                    
+                </div>
+                <div class="clear"></div>
+                <div class="showEvents">
+                    <h3>Latest Event</h3>
+                    
+                New Events to be posted soon.
+
+
+    
+                </div>
+            </div>
+            <div class="col-sm-8 showCategories">
+                <h3>Category Search</h3>
+                <a href="https://www.brooklynmall.co.za/categories.htm?category=Art%2C+Antiques%2C+Curios+%26+Gifts">Art, Antiques, Curios &amp; Gifts</a><a href="https://www.brooklynmall.co.za/categories.htm?category=Audio%2FElectronic%2C+PC%2C+Cellphone+%26+Photo">Audio/Electronic, PC, Cellphone &amp; Photo</a><a href="https://www.brooklynmall.co.za/categories.htm?category=Banks%2C+Forex+%26+Financial">Banks, Forex &amp; Financial</a><a href="https://www.brooklynmall.co.za/categories.htm?category=Books%2C+Cards%2C+Gifts+%26+Stationery">Books, Cards, Gifts &amp; Stationery</a><a href="https://www.brooklynmall.co.za/categories.htm?category=Clothing">Clothing</a><a href="https://www.brooklynmall.co.za/categories.htm?category=Curios%2C+Gifts+%26+Novelties">Curios, Gifts &amp; Novelties</a><a href="https://www.brooklynmall.co.za/categories.htm?category=Department+Stores">Department Stores</a><a href="https://www.brooklynmall.co.za/categories.htm?category=Entertainment+-+Cinemas">Entertainment - Cinemas</a><a href="https://www.brooklynmall.co.za/categories.htm?category=Eyewear+%26+Optometrists">Eyewear &amp; Optometrists</a><a href="https://www.brooklynmall.co.za/categories.htm?category=Fashion">Fashion</a><a href="https://www.brooklynmall.co.za/categories.htm?category=Food">Food</a><a href="https://www.brooklynmall.co.za/categories.htm?category=Food+Speciality">Food Speciality</a><a href="https://www.brooklynmall.co.za/categories.htm?category=Footwear">Footwear</a><a href="https://www.brooklynmall.co.za/categories.htm?category=Hair%2C+Health+%26+Beauty">Hair, Health &amp; Beauty</a><a href="https://www.brooklynmall.co.za/categories.htm?category=Health+%26+Beauty">Health &amp; Beauty</a><a href="https://www.brooklynmall.co.za/categories.htm?category=Home+%2F+D%E9cor">Home / Décor</a><a href="https://www.brooklynmall.co.za/categories.htm?category=Home%2C+Decor%2C+Interior+%26+Furniture">Home, Decor, Interior &amp; Furniture</a><a href="https://www.brooklynmall.co.za/categories.htm?category=Jewellery+%26+Accessories">Jewellery &amp; Accessories</a><a href="https://www.brooklynmall.co.za/categories.htm?category=Liquor+Store">Liquor Store</a><a href="https://www.brooklynmall.co.za/categories.htm?category=Luggage+%26+Leather">Luggage &amp; Leather</a><a href="https://www.brooklynmall.co.za/categories.htm?category=Movies%2C+Music+%26+Entertainment">Movies, Music &amp; Entertainment</a><a href="https://www.brooklynmall.co.za/categories.htm?category=Services">Services</a><a href="https://www.brooklynmall.co.za/categories.htm?category=Speciality">Speciality</a><a href="https://www.brooklynmall.co.za/categories.htm?category=Sport%2C+Outdoor%2C+Goods+%26+Gear">Sport, Outdoor, Goods &amp; Gear</a><a href="https://www.brooklynmall.co.za/categories.htm?category=Toys%2C+Education%2C+Hobbies+%26+Gifts">Toys, Education, Hobbies &amp; Gifts</a><a href="https://www.brooklynmall.co.za/categories.htm?category=Travel+%26+Estate+Agencies">Travel &amp; Estate Agencies</a><a href="https://www.brooklynmall.co.za/categories.htm?category=Travel+%26+Tourism">Travel &amp; Tourism</a>
+            </div>
+        </div><!-- /#search-area -->
+        <!-- Website Search [ End ]  -->
+
+    </div><!-- /#site-head -->
+</header>
+
+<div class="front-image">
+    <img src="./Mall-Map _ Brooklyn Mall_files/background-phone-1.jpg" class="full-width">
+</div>
+</div>
+<!-- Content
+================================================== -->
+<section id="content">
+
+    <div class="container">
+        <div class="row white-BG">
+            <div class="col-xs-12 page-content">
+
+                <h3 class="page-title m-t-15">Mall Map</h3>
+
+                
+<form name="mall-map-search" method="get" action="https://www.brooklynmall.co.za/mall-map.htm">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="row">
+                <div class="col-lg-2">Select a floor map:</div><!-- col-lg-2-->
+                <div class="col-lg-4">
+                    <select id="map_select" name="mapFloor" class="form-control" onchange="showMap(this.options[this.selectedIndex].value)" style="display: none;">
+                    <option value="http://www.mallguide.co.za/uploadimages/mall_117/level1-2015_20150313085626.jpg">Level 1</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg">Level 2</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level3-2015_20150313085642.jpg">Level 3</option>
+
+                    </select><div class="chosen-container chosen-container-single chosen-container-single-nosearch" style="width: 100%;" title="" id="map_select_chosen"><a class="chosen-single" tabindex="-1"><span>Level 1</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off" readonly=""></div><ul class="chosen-results"></ul></div></div><noscript><button type="submit" name="submit" class="btn btn-default">Go</button></noscript>
+                </div><!-- col-lg-4-->
+                <div class="col-lg-2">Find a shop:</div><!-- col-lg-2-->
+                <div class="col-lg-4">
+                    <select id="shop_select" name="category" class="form-control" onchange="showMapLocation(this.options[this.selectedIndex].value)" style="display: none;">
+                    <option value="" selected="selected">Shop Search</option>
+                    <option value="" style="background-color:#353E49; color: #FFF; ">Art, Antiques, Curios &amp; Gifts</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/|||algoa-bay-coffee-company|50350">Algoa Bay Coffee Company</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/|||brooklyn-tabak|38457">Brooklyn Tabak</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/|||cna|38413">CNA</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/|||gallerie-pieter-scheenloop|62678">Gallerie Pieter Scheenloop</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/|||makiwa-art-gallery|56537">Makiwa Art Gallery</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/|||special-pieces|38443">Special Pieces</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/|||the-flower-shop|38410">The Flower Shop</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/|||typo|42594">Typo</option>
+<option value="" style="background-color:#353E49; color: #FFF; ">Audio/Electronic, PC, Cellphone &amp; Photo</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/|||cell-c|38340">Cell C</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/|||celswop|63814">CelSwop</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/|||computer-mania|63792">Computer Mania</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/|||icell|56154">iCell</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/|||icell-kiosk|38451">iCell Kiosk</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/|||istore|50167">iStore</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/|||kodak-express|42583">Kodak Express</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/|||mtn|38341">MTN</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/|||mtn-brooklyn-square|50166">MTN Brooklyn Square</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level1-2015_20150313085626.jpg|548|329|remax|64211">Remax</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level1-2015_20150313085626.jpg|||sterkinekor|38409">Ster-Kinekor</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level1-2015_20150313085626.jpg|||telkom|43965">Telkom</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level1-2015_20150313085626.jpg|||the-gadget-shop|38461">The Gadget Shop</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level1-2015_20150313085626.jpg|||vodacom-shop|38344">Vodacom Shop</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level1-2015_20150313085626.jpg|||wefix|51765">weFix</option>
+<option value="" style="background-color:#353E49; color: #FFF; ">Banks, Forex &amp; Financial</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level1-2015_20150313085626.jpg|||absa|60136">ABSA</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level1-2015_20150313085626.jpg|||absa-atm|63812">ABSA Atm</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level1-2015_20150313085626.jpg|||african-bank|38329">African Bank</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level1-2015_20150313085626.jpg|||bidvest-bank|31848">Bidvest Bank</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level1-2015_20150313085626.jpg|||capitec-bank|38332">Capitec Bank</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level1-2015_20150313085626.jpg|||fnb-atm|38334">FNB - ATM</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level1-2015_20150313085626.jpg|||fnb-branch|38333">FNB - Branch</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level1-2015_20150313085626.jpg|||nedbank-branch|38335">Nedbank - Branch</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level1-2015_20150313085626.jpg|||nedbank-atm|60140">Nedbank ATM</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level1-2015_20150313085626.jpg|||old-mutual-finance|61410">Old Mutual Finance</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level1-2015_20150313085626.jpg|||standard-bank-atm|38337">Standard Bank - ATM</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level1-2015_20150313085626.jpg|||standard-bank-branch|38336">Standard Bank - Branch</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level1-2015_20150313085626.jpg|||standard-bank-atm|60139">Standard Bank ATM</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level1-2015_20150313085626.jpg|||travelex|38330">TravelEx</option>
+<option value="" style="background-color:#353E49; color: #FFF; ">Books, Cards, Gifts &amp; Stationery</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level1-2015_20150313085626.jpg|||brooklyn-library|50164">Brooklyn Library</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level1-2015_20150313085626.jpg|||exclusive-books|38414">Exclusive Books</option>
+<option value="" style="background-color:#353E49; color: #FFF; ">Clothing</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level1-2015_20150313085626.jpg|||barclay-clegg|22869">Barclay &amp; Clegg</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level1-2015_20150313085626.jpg|||big-blue|38390">Big Blue</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level1-2015_20150313085626.jpg|||bras-n-things|63817">Bras N Things</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level1-2015_20150313085626.jpg|||contempo-boutique|60005">Contempo Boutique</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level1-2015_20150313085626.jpg|||cotton-on|47121">Cotton On</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level1-2015_20150313085626.jpg|||cotton-on-kids|51189">Cotton On Kids</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level1-2015_20150313085626.jpg|||country-road|42020">Country Road</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level1-2015_20150313085626.jpg|||diesel|60138">Diesel</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level1-2015_20150313085626.jpg|||edgars|38392">Edgars</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level1-2015_20150313085626.jpg|||edgars-upper-level|60141">Edgars (Upper Level)</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level1-2015_20150313085626.jpg|||envy|42019">Envy</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|429|335|euro-prestige|38393">Euro Prestige</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||factorie|53075">Factorie</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||forever-new|52425">Forever New</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||foschini|38361">Foschini</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||guess|38394">Guess</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||jcrew|55712">JCrew</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||jolie-by-rosella|38385">Jolie by Rosella</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||jones-kent-of-london|49082">Jones &amp; Kent of London</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||juniper-jasmine|63815">Juniper &amp; Jasmine</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||keedo|38405">Keedo</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||kingsley-heath|63816">Kingsley Heath</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||london-royal|58995">London Royal</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||miladys|59266">Miladys</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||mr-price-weekend|38399">Mr Price Weekend</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||nicci-boutique|38366">Nicci Boutique</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||old-khaki|52422">Old Khaki</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||pick-n-pay-clothing|50343">Pick 'n Pay Clothing</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||poetry|42579">Poetry</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||pringle-of-scotland|42592">Pringle of Scotland</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||queenspark|18835">Queenspark</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||rage|57193">Rage</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|343|538|refinery|64209">Refinery</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||rosella|42021">Rosella</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||savelkouls|38373">Savelkouls</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||the-space|42018">The Space</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||timberland|42593">Timberland</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||tip-top-tailor|63813">Tip Top Tailor</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||trenery|42580">Trenery</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||truworths|38401">Truworths</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||truworths-upper-level|60142">Truworths (Upper Level)</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||woolworths-upper-level|60143">Woolworths (Upper Level)</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||your-pal|38377">Your Pal</option>
+<option value="" style="background-color:#353E49; color: #FFF; ">Curios, Gifts &amp; Novelties</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||life-from-the-roots|55711">Life from the Roots</option>
+<option value="" style="background-color:#353E49; color: #FFF; ">Department Stores</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||checkers|18309">Checkers</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||game|38404">Game</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||woolworths|38402">Woolworths</option>
+<option value="" style="background-color:#353E49; color: #FFF; ">Entertainment - Cinemas</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||cinema-nouveau|38408">Cinema Nouveau</option>
+<option value="" style="background-color:#353E49; color: #FFF; ">Eyewear &amp; Optometrists</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||saks-taylor-brauer|38379">Saks, Taylor &amp; Brauer</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||sunglass-hut|38380">Sunglass Hut</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||the-optometrist|58991">The Optometrist</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||torga-optical|38381">Torga Optical</option>
+<option value="" style="background-color:#353E49; color: #FFF; ">Fashion</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|462|377|asozar|64393">Asozar</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|458|343|lulu-belle|64394">Lulu Belle</option>
+<option value="" style="background-color:#353E49; color: #FFF; ">Food</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||brooklyn-biltong|38447">Brooklyn Biltong</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||brooklyn-meat-deli|63811">Brooklyn Meat Deli</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||cafe-rossini|38468">Cafe Rossini</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||caffe-frescatti|38467">Caffe Frescatti</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||chiapas-eat-mexican|60002">CHIAPAS eat mexican</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||cofi|49648">Co.fi</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||colcacchio|49649">Col'cacchio</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||hagendazs|47113">Häagen-Dazs</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||icandy|38453">iCandy</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||kauai|58786">Kauai</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||krispy-kreme|38446">Krispy Kreme</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||london-pie-co|38450">London Pie Co</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||lucky-bread|43966">Lucky Bread</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||moo-moo-wine-bar-grill|49650">Moo Moo Wine Bar &amp; Grill</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||mugg-bean|38471">Mugg &amp; Bean</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||mythos|49651">Mythos</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||ocean-basket|49652">Ocean Basket</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||portugalo|62956">PortuGalo</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||seattle-coffee-co|38474">Seattle Coffee Co</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||simply-asia|55880">Simply Asia</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||spur-phoenix|38473">Spur - Phoenix</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||starbucks|58538">Starbucks</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||tashas|49653">Tashas</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||wimpy|38475">Wimpy</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||wood-fire|58537">Wood &amp; Fire</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||woolworths-caf|38476">Woolworths Café</option>
+<option value="" style="background-color:#353E49; color: #FFF; ">Food Speciality</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level1-2015_20150313085626.jpg|431|334|biltong-republic|64390">Biltong Republic</option>
+<option value="" style="background-color:#353E49; color: #FFF; ">Footwear</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level1-2015_20150313085626.jpg|||aldo|42014">Aldo</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level1-2015_20150313085626.jpg|||green-cross|58535">Green Cross</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|603|192|mr-tekkie|64208">Mr. Tekkie</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||rosella-shoes|58532">Rosella Shoes</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||socrati|38386">Socrati</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||step-ahead|14944">Step Ahead</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||tread-miller|53078">Tread + Miller</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||tsonga|58996">Tsonga</option>
+<option value="" style="background-color:#353E49; color: #FFF; ">Hair, Health &amp; Beauty</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||barber-at-brooklyn|38418">Barber At Brooklyn</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||bobbi-brown-cosmetics|50349">Bobbi Brown Cosmetics</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||clicks|50165">Clicks</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||clicks-pharmacy-clinic|38477">Clicks Pharmacy &amp; Clinic</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||deluxe-laser-spa|61863">Deluxe Laser &amp; Spa</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||dischem|38478">Dis-Chem</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||gary-rom-hairdressing|50348">Gary Rom Hairdressing</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|429|322|jo-malone|64395">Jo Malone</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||kind2hearing|58536">Kind2Hearing</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||le-chic-beauty-clinic|38480">Le Chic Beauty Clinic</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||macmillan-hair|38421">Macmillan Hair</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||placecol|38483">Placecol</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||princess-hair-salon|49084">Princess Hair Salon</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||rain|54135">Rain</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||skinphd|52387">SkinPhD</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||sorbet|42022">Sorbet</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||sorbet-man|60003">Sorbet Man</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||the-body-shop|38484">The Body Shop</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||the-perfume-gallery|38485">The Perfume Gallery</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||wellness-warehouse|38472">Wellness Warehouse</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level1-2015_20150313085626.jpg|445|289|xtreme-nutrition|64210">Xtreme Nutrition</option>
+<option value="" style="background-color:#353E49; color: #FFF; ">Health &amp; Beauty</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level1-2015_20150313085626.jpg|||mud-studio|38364">MUD Studio</option>
+<option value="" style="background-color:#353E49; color: #FFF; ">Home / Décor</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level3-2015_20150313085642.jpg|311|243|flying-persian-carpets|63419">Flying Persian Carpets</option>
+<option value="" style="background-color:#353E49; color: #FFF; ">Home, Decor, Interior &amp; Furniture</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level3-2015_20150313085642.jpg|||home|56159">@Home</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level3-2015_20150313085642.jpg|||home-livingspace|50342">@Home Livingspace</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level3-2015_20150313085642.jpg|||biggie-best|61850">Biggie Best</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level3-2015_20150313085642.jpg|||carrol-boyes|38433">Carrol Boyes</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level3-2015_20150313085642.jpg|||cielo|49630">Cielo</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level3-2015_20150313085642.jpg|||coricraft|49631">Coricraft</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level3-2015_20150313085642.jpg|||dialabed|49632">Dial-a-Bed</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level3-2015_20150313085642.jpg|||house-haven|38432">House &amp; Haven</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level3-2015_20150313085642.jpg|||house-of-mangar|64391">House of Mangar</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level3-2015_20150313085642.jpg|||le-creuset|38439">Le Creuset</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|327|582|loads-of-living|49634">Loads of Living</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||morelli-rugs|50142">Morelli Rugs</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||mr-price-home|38441">Mr Price Home</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||pure-canvas-factory|58534">Pure Canvas Factory</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||rochester|49635">Rochester</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||sterlings|61864">Sterlings</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||the-coffee-company|38444">The Coffee Company</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||the-golden-goose-artistry|47125">The Golden Goose Artistry</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||vencasa|49636">Vencasa</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||weylandts|49639">Weylandts</option>
+<option value="" style="background-color:#353E49; color: #FFF; ">Jewellery &amp; Accessories</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||american-swiss|38345">American Swiss</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||browns-the-diamond-store|38348">Browns The Diamond Store</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||greig-meinke-jewellers|38350">Greig &amp; Meinke Jewellers</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||jdc-jewellery-design-company|38351">JDC - Jewellery Design Company</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||lovisa|38353">Lovisa</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||mont-blanc|38354">Mont Blanc</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||nwj-fine-jewellery|22743">NWJ Fine Jewellery</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||pandora|42017">Pandora</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||silverline|38356">Silverline</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||swarovski|50344">Swarovski</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||vienna-jewellers|38357">Vienna Jewellers</option>
+<option value="" style="background-color:#353E49; color: #FFF; ">Liquor Store</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||the-fridge|61412">The Fridge</option>
+<option value="" style="background-color:#353E49; color: #FFF; ">Luggage &amp; Leather</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|452|394|cellini|64392">Cellini</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||filly-leather|38368">Filly Leather</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||frasers|38370">Frasers</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||samsonite|62282">Samsonite</option>
+<option value="" style="background-color:#353E49; color: #FFF; ">Movies, Music &amp; Entertainment</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||musica|38416">Musica</option>
+<option value="" style="background-color:#353E49; color: #FFF; ">Services</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||brooklyn-car-wash|38456">Brooklyn Car Wash</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||levingers|38458">Levingers</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||postnet|50345">Postnet</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||the-security-solution|38464">The Security Solution</option>
+<option value="" style="background-color:#353E49; color: #FFF; ">Speciality</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||the-inky-shop|38462">The Inky Shop</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||the-scoin-shop|38459">The Scoin Shop</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||verimark-direct|61413">Verimark Direct</option>
+<option value="" style="background-color:#353E49; color: #FFF; ">Sport, Outdoor, Goods &amp; Gear</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||cape-union-mart|38391">Cape Union Mart</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||le-coq-sportif|61411">le coq sportif</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||mr-price-sport|51581">Mr Price Sport</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||the-cross-trainer|57467">The Cross Trainer</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||totalsports|38400">Totalsports</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||trappers|52421">Trappers</option>
+<option value="" style="background-color:#353E49; color: #FFF; ">Toys, Education, Hobbies &amp; Gifts</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||toy-kingdom|38407">Toy Kingdom</option>
+<option value="" style="background-color:#353E49; color: #FFF; ">Travel &amp; Estate Agencies</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||flight-centre|38387">Flight Centre</option>
+<option value="" style="background-color:#353E49; color: #FFF; ">Travel &amp; Tourism</option>
+<option value="http://www.mallguide.co.za/uploadimages/mall_117/level2-2015_20150313085632.jpg|||pentravel|38388">Pentravel</option>
+
+                    </select><div class="chosen-container chosen-container-single" style="width: 100%;" title="" id="shop_select_chosen"><a class="chosen-single" tabindex="-1"><span>Shop Search</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off"></div><ul class="chosen-results"></ul></div></div><noscript><button type="submit" name="submit" class="btn btn-default">Go</button></noscript>
+                </div><!-- col-lg-4-->
+            </div><!-- .row -->
+        </div>
+    </div><!-- .row -->
+</form>
+<br><br>
+
+<div id="mall_map_outer_container">
+	<a id="mall_map_btn_up" href="javascript:void(0);">Up Button</a><!-- #mall_map_btn_up -->
+	<div id="mall_map_inner_container">
+		<a id="mall_map_btn_left" href="javascript:void(0);">Left Button</a><!-- #mall_map_btn_up -->    
+		<div id="mall_map_window">
+			<div id="no_point">No Shop Location</div>
+			<div id="mall_map_pane" style="top: -451.891px;">          
+				<img id="mall_map_point" src="./Mall-Map _ Brooklyn Mall_files/mallmap_point.png" style="display: none;">
+				<img id="mall_map_img" src="./Mall-Map _ Brooklyn Mall_files/level2-2015_20150313085632.jpg">          
+			</div>  
+		</div><!-- mall_map_window -->
+		<a id="mall_map_btn_right" href="javascript:void(0);">Right Button</a><!-- #mall_map_btn_up -->
+		<div class="clear"></div>
+	</div><!-- #mall_map_inner_container -->
+	<a id="mall_map_btn_down" href="javascript:void(0);">Down Button</a><!-- #mall_map_btn_down -->
+</div><!-- #mall_map_container -->
+
+
+
+            </div>
+            <div class="col-sm-1"></div>
+        </div><!-- .row -->
+    </div><!-- .container -->
+
+    <div class="container">
+    <div class="row white-BG lineBottom">
+        <div class="row">
+            <div class="col-md-4 col-sm-12 eventImage">
+                <a href="https://www.brooklynmall.co.za/hours.htm"><img src="./Mall-Map _ Brooklyn Mall_files/trading-hours-page.jpg"></a>
+            </div>
+            <div class="col-md-4 col-sm-12 eventImage">
+                <a href="https://www.brooklynmall.co.za/facilities.htm"><img src="./Mall-Map _ Brooklyn Mall_files/gift-card-page.jpg"></a>
+            </div>
+            <div class="col-md-4 col-sm-12 eventImage">
+                <a href="https://www.brooklynmall.co.za/parking.htm"><img src="./Mall-Map _ Brooklyn Mall_files/parking-card-page.jpg"></a>
+            </div>
+        </div>
+        <!-- .row -->
+        <div class="clear"></div>
+        <hr>
+        <div class="row">
+            <div class="col-xs-12">
+    
+                
+                <a href="https://www.brooklynmall.co.za/events.htm"><div id="eventCalendar">
+                    <span id="calendarMonth">December</span>
+                    <span id="calendarStartMonth">&nbsp;</span>
+                    <span id="calendarDate">3</span>
+                </div></a>
+                                <div id="socialLinks">
+								
+                     <a href="https://twitter.com/BrooklynMall_SA" class="circle" target="_blank"><img src="./Mall-Map _ Brooklyn Mall_files/twitter-icon.gif" alt="T" width="22"></a>
+                    <a href="https://www.facebook.com/BrooklynMall" class="square" target="_blank"><img src="./Mall-Map _ Brooklyn Mall_files/fb-icon.gif" alt="F" width="25"></a>
+					<a href="https://www.instagram.com/Brooklyn_Mall" class="circle" target="_blank"><img src="./Mall-Map _ Brooklyn Mall_files/instagram-icon.gif" alt="I" width="25"></a>
+
+                </div>
+                <div class="col-xs-8 " id="">
+				<a href="https://www.brooklynmall.co.za/events.htm"><img src="./Mall-Map _ Brooklyn Mall_files/Antique-Fair---Generic---Web-Banner.jpg" alt="Latest Events" width="100%"></a>
+                    <!--<a href="/events.htm"><img src="/img/event-image.jpg" alt="Latest Events" width="100%" /></a>-->
+					<!--<img src="images/Antique-Fair---Generic---Web-Banner.jpg" id="eventImage" />-->
+                </div>
+
+
+    
+                
+                <!--<div id="socialLinks">
+                    <a href="https://www.facebook.com/BrooklynMall" class="square" target="_new"><img src="/img/fb-icon.gif" alt="F" width="25" /></a>
+                    <a href="https://twitter.com/brooklynmall" class="circle" target="_new"><img src="/img/twitter-icon.gif" alt="T" width="22" /></a>
+                    <a href="https://www.instagram.com/@Brooklyn_Mall" class="circle" target="_new"><img src="/img/instagram-icon.gif" alt="I" width="25" /></a>
+                    
+                </div>-->
+            </div>
+        </div>
+        <!-- .row -->
+        <div class="clear"></div>
+    </div>
+    <!-- .row -->
+    <div class="clear"></div>
+    <br>
+</div>
+<!-- .container -->
+
+
+</section>
+
+<!-- Footer
+================================================== -->
+<footer>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 p-15">
+                Copyright © Brooklyn Mall 2019. All rights reserved.<br>
+                <a target="_new" href="https://www.brooklynmall.co.za/terms_privacy/terms.php">Terms &amp; Conditions</a> |
+                <a target="_new" href="https://www.brooklynmall.co.za/terms_privacy/privacy.php">Privacy Policy</a>
+            </div>
+            <div class="col-sm-6 p-15 align-sm-right">
+                <a target="_new" href="https://fgx.co.za/" title="Web Development Services">
+                    Designed&nbsp;&amp;&nbsp;Developed&nbsp;by:&nbsp;&nbsp;&nbsp;<img src="./Mall-Map _ Brooklyn Mall_files/logo.png" alt="FGX Studios :: Web Development Services" class="logo-fgx">
+                </a>
+            </div>
+        </div>
+    </div>
+
+</footer>
+
+<!-- Scripts
+================================================== -->
+<!-- jQuery & JavaScript
+================================================== -->
+<!-- Libraries -->
+<script type="text/javascript" async="" src="./Mall-Map _ Brooklyn Mall_files/analytics.js.download"></script><script type="text/javascript" async="" src="./Mall-Map _ Brooklyn Mall_files/js"></script><script src="./Mall-Map _ Brooklyn Mall_files/jquery-2.1.1.min.js.download"></script>
+<script src="./Mall-Map _ Brooklyn Mall_files/jquery.easing.1.3.js.download"></script>
+<script src="./Mall-Map _ Brooklyn Mall_files/jquery.easing.compatibility.js.download"></script>
+<script src="./Mall-Map _ Brooklyn Mall_files/modernizr.2.8.3.min.js.download"></script>
+<script src="./Mall-Map _ Brooklyn Mall_files/jquery.matchHeight-min.js.download"></script>
+<!-- Bootstrap -->
+<script src="./Mall-Map _ Brooklyn Mall_files/bootstrap.js.download"></script>
+<script src="./Mall-Map _ Brooklyn Mall_files/bootstrap-datepicker.js.download"></script>
+<script src="./Mall-Map _ Brooklyn Mall_files/bootstrap-checkbox.js.download"></script>
+<script src="./Mall-Map _ Brooklyn Mall_files/bootstrap-modalmanager.js.download"></script>
+<script src="./Mall-Map _ Brooklyn Mall_files/bootstrap-modal.js.download"></script>
+<!-- Plugins -->
+<script src="./Mall-Map _ Brooklyn Mall_files/magnific-popup.js.download"></script>
+<script src="./Mall-Map _ Brooklyn Mall_files/chosen.jquery.min.js.download"></script>
+<script src="./Mall-Map _ Brooklyn Mall_files/holder.js.download"></script>
+<!-- Project -->
+<script src="./Mall-Map _ Brooklyn Mall_files/main.js.download"></script>
+<script src="./Mall-Map _ Brooklyn Mall_files/scripts.js.download"></script>
+
+
+<script type="text/javascript" src="./Mall-Map _ Brooklyn Mall_files/mall_map.js.download"></script>
+
+<!-- Analytics
+================================================== -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="./Mall-Map _ Brooklyn Mall_files/js(1)"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-24027076-18');
+</script>
+
+
+</body></html>
